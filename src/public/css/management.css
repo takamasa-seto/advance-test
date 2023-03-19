@@ -1,0 +1,156 @@
+.form {
+  border: 1px solid black;
+  width: 100%;
+  padding: 30px;
+}
+
+.form__input--text input {
+  height: 40px;
+  width: 250px;
+}
+
+.form__group__set {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form__group__set .form__group:not(:last-child) {
+  margin-right: 60px;
+}
+
+.form__group {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.form__label--item {
+  font-weight: bold;
+}
+
+.form__group-title {
+  padding-top: 8px;
+  text-align: left;
+}
+
+.fullname__form__group .form__group-title,
+.create_date__form__group .form__group-title,
+.email__form__group .form__group-title {
+  width: 150px;
+}
+
+.gender__form__group .form__group-title {
+  width: 80px;
+}
+
+.form__input--radio label:not(:last-child) {
+  margin-right: 30px;
+}
+
+.form__label--tilde {
+  margin: auto 30px;
+}
+
+.form__input--radio {
+  margin-top: 8px;
+}
+
+.form__button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.form__button button {
+  display: block;
+  margin: 5px auto;
+}
+
+.search-table__group {
+  margin: 0 auto;
+  max-width: 1230px;
+}
+
+.search-table__group {
+  padding: 20px;
+}
+
+.search-table__group table {
+  text-align: left;
+  width: 100%;
+}
+
+.search-table__row:first-of-type {
+  border-bottom: 3px solid black;
+}
+
+.search-table__header span,
+.search-table__item span {
+  display: inline-block;
+}
+
+.search-table__header span:first-child,
+.search-table__item span:first-child {
+  margin-left: 30px;
+}
+
+.search-table__header span:nth-of-type(1),
+.search-table__item span:nth-of-type(1) {
+  width: 40px;
+}
+
+.search-table__header span:nth-of-type(2),
+.search-table__item span:nth-of-type(2) {
+  width: 90px;
+}
+
+.search-table__item span:nth-of-type(2) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+.search-table__header span:nth-of-type(3),
+.search-table__item span:nth-of-type(3) {
+  width: 50px;
+}
+
+.search-table__header span:nth-of-type(4),
+.search-table__item span:nth-of-type(4) {
+  width: 160px;
+}
+
+.search-table__item span:nth-of-type(4) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+.search-table__header span:nth-of-type(5),
+.search-table__item span:nth-of-type(5) {
+  width: 25em;
+}
+
+.search-table__item span:nth-of-type(5) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+.delete-form__button-submit {
+  width: 60px;
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+svg.w-5.h-5 {
+  /*paginateメソッドの矢印の大きさ調整のために追加*/
+  width: 30px;
+  height: 30px;
+}

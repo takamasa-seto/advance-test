@@ -1,0 +1,95 @@
+/* フォーム内の設定 */
+.form__group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.form__group-title {
+  margin-top: 10px;
+}
+
+.form__label--item {
+  font-weight: bold;
+}
+
+.form__label--required {
+  color: #ff0000;
+}
+
+.form__error {
+  height: 20px;
+  color: #ff0000;
+  text-align: left;
+}
+
+.form__input--text input, .form__input--text textarea {
+  padding: 10px;
+  width: 600px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  appearance: none;
+}
+
+.form__input--text input {
+  height: 40px;
+}
+
+.form__example {
+  text-align: left;
+  margin: 5px auto;
+  padding-left: 16px;
+  color: #bbb;
+}
+
+/* お名前欄の調整 */
+.form__group-content--fullname {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.fullname__form__group input {
+  width: 290px;
+}
+
+/* 性別の調整 */
+.gender__form__group {
+  margin-bottom: 44px;
+}
+
+.form__input--radio {
+  width: 600px;
+  text-align: left;
+  padding-top: 10px;
+}
+
+.form__input--radio label:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* 郵便番号欄の調整 */
+.postcode__form__group input {
+  width: 560px;
+}
+
+.postcode__form__group .form__input--text {
+  display: inline-block;
+}
+
+.postcode__form__group .form__group-content span {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+/* ご意見欄の調整 */
+.opinion__form__group textarea {
+  height: 150px;
+}
+
+/* 確認ボタンの調整 */
+.form__button {
+  margin-top: 30px;
+}
