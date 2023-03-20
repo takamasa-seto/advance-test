@@ -7,6 +7,19 @@
 @section('content')
   <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
   <script>
+    function Zenkaku2hankaku(str) {
+      tmp = str.replace("ー", "-");  /* やりそうな文字だから追加 */
+      return tmp.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function (s) {
+        return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+      });
+    }
+    function zipcode2address(zipcode_obj, address_txt) {
+      str = zipcode_obj.value;
+      zipcode_obj.value = Zenkaku2hankaku(str);
+      AjaxZip3.zip2addr(zipcode_obj, '', address_txt, address_txt);
+    }
+  </script>
+  <script>
     document.addEventListener('DOMContentLoaded', function(){
       var first_name = document.getElementById('first_name');
       var last_name = document.getElementById('last_name');
@@ -90,7 +103,7 @@
           <span>〒</span>
           <div class="form__input--text">
             <input type="text" name="postcode" value="{{ old('postcode') }}"
-            onKeyUp="AjaxZip3.zip2addr(this, '', 'address', 'address');"/>
+            onKeyUp="zipcode2address(this, 'address');"/>
             <p class="form__example">例&#xFF09; 123-4567</p>
           </div>
           <div class="form__error">
