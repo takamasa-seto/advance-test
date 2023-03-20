@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+  <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function(){
       var first_name = document.getElementById('first_name');
@@ -88,7 +89,8 @@
         <div class="form__group-content">
           <span>〒</span>
           <div class="form__input--text">
-            <input type="text" name="postcode" value="{{ old('postcode') }}"/>
+            <input type="text" name="postcode" value="{{ old('postcode') }}"
+            onKeyUp="AjaxZip3.zip2addr(this, '', 'address', 'address');"/>
             <p class="form__example">例&#xFF09; 123-4567</p>
           </div>
           <div class="form__error">
