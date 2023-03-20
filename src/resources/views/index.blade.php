@@ -103,7 +103,7 @@
           <span>〒</span>
           <div class="form__input--text">
             <input type="text" name="postcode" value="{{ old('postcode') }}"
-            onKeyUp="zipcode2address(this, 'address');"/>
+            onChange="zipcode2address(this, 'address');"/>
             <p class="form__example">例&#xFF09; 123-4567</p>
           </div>
           <div class="form__error">
