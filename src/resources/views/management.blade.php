@@ -64,7 +64,7 @@
           </div>
         </div>
         <div class="form__button">
-          <button class="form__button-submit" type="submit" name="search" value='search'>確認</button>
+          <button class="form__button-submit" type="submit" name="search" value='search'>検索</button>
           <button class="form__button-repair" type="submit" name="reset" value='reset'>リセット</button>
         </div>
       </form>
