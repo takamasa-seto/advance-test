@@ -19,8 +19,7 @@ Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
 Route::post('/contacts', [ContactController::class, 'store']);
 Route::get('/management', [ContactController::class, 'manage']);
 Route::delete( '/management/delete', [ContactController::class, 'destroy']);
+Route::post( '/management/search', [ContactController::class, 'search']);
 Route::get( '/management/search', [ContactController::class, 'search']);
-
-/* Route::post('/checkvalues', [ContactController::class, 'checkvalues']); */
 
 

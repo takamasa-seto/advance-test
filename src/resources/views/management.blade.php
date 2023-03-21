@@ -8,7 +8,7 @@
   <div class="contact-form__content">
     <div class="contact-form__heading">
       <h2>管理システム</h2>
-      <form class="form" action="/management/search" method="get">
+      <form class="form" action="/management/search" method="post">
         @csrf
         <div class="form__group__set">
           <div class="form__group fullname__form__group">
@@ -17,7 +17,7 @@
             </div>
             <div class="form__group-content">
               <div class="form__input--text">
-                <input type="text" name="fullname" value="{{ old('fullname') }}">
+                <input type="text" name="fullname" value="{{ Session::has('fullname') ? Session::get('fullname') : '' }}">
               </div>
             </div>
           </div>
@@ -27,11 +27,11 @@
             </div>
             <div class="form__group-content">
               <div class="form__input--radio">
-                <input type="radio" name="gender" id="all" value="0" {{ old('gender', '0') == '0' ? 'checked' : '' }}/>
+                <input type="radio" name="gender" id="all" value="0" {{ Session::has('gender') ? (Session::get('gender') == '0' ? 'checked' : '') : 'checked' }}/>
                   <label for="all" class="radio">全て</label>
-                <input type="radio" name="gender" id="male" value="1" {{ old('gender') == '1' ? 'checked' : '' }}/>
+                <input type="radio" name="gender" id="male" value="1" {{ Session::has('gender') ? (Session::get('gender') == '1' ? 'checked' : '') : '' }}/>
                   <label for="male" class="radio">男性</label>
-                <input type="radio" name="gender" id="female" value="2" {{ old('gender') == '2' ? 'checked' : '' }}/>
+                <input type="radio" name="gender" id="female" value="2" {{ Session::has('gender') ? (Session::get('gender') == '2' ? 'checked' : '') : '' }}/>
                   <label for="female" class="radio">女性</label>
               </div>
             </div>
@@ -43,13 +43,13 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-              <input type="text" name="created_at_from" value="{{ old('created_at_from') }}">
+              <input type="text" name="created_at_from" value="{{ Session::has('created_at_from') ? Session::get('created_at_from') : '' }}">
             </div>
           </div>
           <span  class="form__label--tilde">~</span>
           <div class="form__group-content">
             <div class="form__input--text">
-              <input type="text" name="created_at_to" value="{{ old('created_at_to') }}">
+              <input type="text" name="created_at_to" value="{{ Session::has('created_at_to') ? Session::get('created_at_to') : '' }}">
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-              <input type="text" name="email" value="{{ old('email') }}">
+              <input type="text" name="email" value="{{ Session::has('email') ? Session::get('email') : '' }}">
             </div>
           </div>
         </div>
