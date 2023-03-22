@@ -1,0 +1,31 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-link-outer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.current-page {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border: 1px solid gray;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.other-page {
+  text-decoration: none;
+  color: black;
+  border: 1px solid #bbb;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  margin: 0;
+}
