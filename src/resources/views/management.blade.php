@@ -71,7 +71,7 @@
     </div>
   </div>
   <div class="search-table__group">
-    {{ $contacts->links() }}
+    {{ $contacts->links('layouts.pagenation') }}
     <table>
       <tr class="search-table__row">
         <th class="search-table__header">
