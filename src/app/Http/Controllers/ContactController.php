@@ -50,7 +50,7 @@ class ContactController extends Controller
     {
         Contact::find($request->id)->delete();
 
-        return redirect('/management');
+        return redirect('/management/search')->withInput();
     }
 
     public function search(Request $request)
