@@ -8,7 +8,7 @@
   <div class="contact-form__content">
     <div class="contact-form__heading">
       <h2>管理システム</h2>
-      <form class="form" action="/management/search" method="post">
+      <form class="form" action="/management" method="post">
         @csrf
         <div class="form__group__set">
           <div class="form__group fullname__form__group">
