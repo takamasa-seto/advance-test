@@ -27,7 +27,7 @@ class ContactRequest extends FormRequest
             'fullname' => ['required', 'string', 'max:255'],
             'gender' => ['required'],
             'email' => ['required', 'string', 'max:255'],
-            'postcode' => ['required', 'regex:/^[\x00-\x7f]+$/', 'max:8'],
+            'postcode' => ['required', 'regex:/^[\x00-\x7f]+$/', 'min:8', 'max:8'],
             'address' => ['required', 'string', 'max:255'],
             'building_name' => ['nullable', 'string', 'max:255'],
             'opinion' => ['required']
@@ -46,7 +46,8 @@ class ContactRequest extends FormRequest
             'email.max' => 'メールアドレスを255文字以下で入力してください',
             'postcode.required' => '郵便番号を入力してください',
             'postcode.regex' => '郵便番号を半角英数字で入力してください',
-            'postcode.max' => '郵便番号を8文字以下で入力してください',
+            'postcode.min' => '郵便番号を8文字で入力してください',
+            'postcode.max' => '郵便番号を8文字で入力してください',
             'address.required' => '住所を入力してください',
             'address.string' => '住所を文字列で入力してください',
             'address.max' => '住所を255文字以下で入力してください',
